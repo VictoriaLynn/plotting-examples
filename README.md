@@ -23,7 +23,7 @@ From `example_data/gridded_2D.txt`. Used with:
 
 * `contour_surf.m`: Contour, filled contour, and surface plots of meshgrid data
 
-##### Non-Gridded 2D data (experimental)
+##### Non-Gridded 2D data (e.g. experimental data)
 
 From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)` points that are not on a regular grid. Used with:
 
