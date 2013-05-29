@@ -9,6 +9,8 @@ From `example_data/column_data.txt`. Used with:
 
 * `line_plot.m`: Standard line plot with different formatting options
 
+![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/line_plot.png)
+
 * `stacked_area.m`: Stacked area plot with color options
 
 * `histogram_cdf.m`: Standard plots of frequency distributions
