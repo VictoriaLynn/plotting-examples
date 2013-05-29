@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Matlab Plotting Examples by jdherman</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Matlab Plotting Examples</h1>
+          <h2>Simplified examples of Matlab's built-in plotting tools for different types of data</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/jdherman/matlab-plotting-examples/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/jdherman/matlab-plotting-examples/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/jdherman/matlab-plotting-examples" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>
+<a name="matlab-plotting-examples" class="anchor" href="#matlab-plotting-examples"><span class="octicon octicon-link"></span></a>Matlab Plotting Examples</h2>
+
+<h4>
+<a name="some-examples-for-plotting-different-types-of-data" class="anchor" href="#some-examples-for-plotting-different-types-of-data"><span class="octicon octicon-link"></span></a>Some examples for plotting different types of data</h4>
+
+<p>See <code>example_images/</code> for the outputs from these files (PNG). Note that publication-quality figures will usually require a <strong>vector graphics format</strong> (SVG/EPS/PDF) along with some manual editing to improve font clarity, etc. The examples shown here are in <strong>unedited raster format</strong> and are only meant to be illustrative. (In raster format, the clarity of figure text will suffer if the images are resized).</p>
+
+<h4>
+<a name="column-data" class="anchor" href="#column-data"><span class="octicon octicon-link"></span></a>Column data</h4>
+
+<p>From <code>example_data/column_data.txt</code>. Used with:</p>
+
+<ul>
+<li>
+<code>line_plot.m</code>: Standard line plot with different formatting options</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/line_plot.png" alt="Image"></p>
+
+<ul>
+<li>
+<code>stacked_area.m</code>: Stacked area plot with color options</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/stacked_area.png" alt="Image"></p>
+
+<ul>
+<li>
+<code>histogram_cdf.m</code>: Standard plots of frequency distributions</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/histogram_and_cdf.png" alt="Image"></p>
+
+<ul>
+<li>
+<code>parallel_coordinate.m</code>: Plots row entries as lines instead of columns. Options to scale all values between <code>[0,1]</code> and toggle solutions on/off above/below a certain threshold. (These functions are included in <code>/util/</code>).</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/parallel_coordinate.png" alt="Image"></p>
+
+<h4>
+<a name="gridded-2d-data" class="anchor" href="#gridded-2d-data"><span class="octicon octicon-link"></span></a>Gridded 2D data</h4>
+
+<p>From <code>example_data/gridded_2D.txt</code>. Used with:</p>
+
+<ul>
+<li>
+<code>imagesc_plot.m</code>: Show matrix values directly as color blocks</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/imagesc_plot.png" alt="Image"></p>
+
+<ul>
+<li>
+<code>contour_surf.m</code>: Contour, filled contour, and surface plots of meshgrid data</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/contour_surf.png" alt="Image"></p>
+
+<h4>
+<a name="non-gridded-2d-data-eg-experimental-data" class="anchor" href="#non-gridded-2d-data-eg-experimental-data"><span class="octicon octicon-link"></span></a>Non-Gridded 2D data (e.g. experimental data)</h4>
+
+<p>From <code>example_data/non_gridded_2D.txt</code>. The data file contains rows of <code>(x,y,z)</code> points that are not on a regular grid. Used with:</p>
+
+<ul>
+<li>
+<code>scatter_plot.m</code>: Plot the irregularly spaced points as dots, with <code>Z</code> values as the color</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/scatter_plot.png" alt="Image"></p>
+
+<ul>
+<li>
+<code>contourf_non_gridded.m</code>: Use Matlab's built-in <code>griddata</code> function to interpolate the data onto a standard meshgrid, which can then be used for standard contour/mesh/surf plots, etc.</li>
+</ul><p><img src="https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/contourf_non_gridded.png" alt="Image"></p>
+        </section>
+
+        <footer>
+          Matlab Plotting Examples is maintained by <a href="https://github.com/jdherman">jdherman</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
