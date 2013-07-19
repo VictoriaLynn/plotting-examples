@@ -1,5 +1,6 @@
-## Matlab Plotting Examples
-#### Some examples for plotting different types of data
+## Plotting Examples
+#### Some examples for plotting different types of data in Matlab and Python
+Contributors: @jdherman and @matthewjwoodruff
 
 See `example_images/` for the outputs from these files (PNG). Note that publication-quality figures will usually require a vector graphics format (SVG/EPS/PDF) along with some manual editing to improve font clarity, etc. The examples shown here are in unedited raster format and are only meant to be illustrative.
 
