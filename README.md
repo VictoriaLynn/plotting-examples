@@ -20,7 +20,7 @@ From `example_data/column_data.txt`. Used with:
 
 ![Image](example_images/stacked_area.png)
 
-* `animated_gif.m`: Save loop of images as a `.gif` animation
+* `animated_gif.{m,py}`: Save loop of images as a `.gif` animation.  The Python version requires you to use `imagemagick` after the fact to stick the frames together: `convert -delay 15 -loop 0 frame*png animation.gif`.
 
 ![Image](example_images/animated_sinewave.gif)
 
@@ -55,10 +55,4 @@ From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)`
 * `contourf_non_gridded.{m,py}`: Use Matlab's built-in `griddata` function to interpolate the data onto a standard meshgrid, which can then be used for standard contour/mesh/surf plots, etc.
 
 ![Image](example_images/contourf_non_gridded.png)
-
-##### Animation
-
-* `animation.py`: Generates its data on the fly to make an animated sinusoid.  The Python version requires `imagemagick`.  After the frames have been generated, run `convert -delay 15 -loop 0 frame*png animation.gif`.
-
-![Image](example_images/animation.gif)
 
