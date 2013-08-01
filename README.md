@@ -14,7 +14,7 @@ From `example_data/column_data.txt`. Used with:
 
 * `fill_between.py`: Same data as `line_plot`, with shaded fill between Series 1 and Series 2
 
-![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/fill_between.png)
+![Image](example_images/fill_between.png)
 
 * `stacked_area.m`: Stacked area plot with color options
 
