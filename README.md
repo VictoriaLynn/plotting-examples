@@ -8,9 +8,13 @@ See `example_images/` for the outputs from these files (PNG). Note that publicat
 
 From `example_data/column_data.txt`. Used with:
 
-* `line_plot.m`: Standard line plot with different formatting options
+* `line_plot.{m,py}`: Standard line plot with different formatting options
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/line_plot.png)
+
+* `fill_between.py`: Same data as `line_plot`, with shaded fill between Series 1 and Series 2
+
+![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/fill_between.png)
 
 * `stacked_area.m`: Stacked area plot with color options
 
@@ -44,6 +48,6 @@ From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)`
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/scatter_plot.png)
 
-* `contourf_non_gridded.m`: Use Matlab's built-in `griddata` function to interpolate the data onto a standard meshgrid, which can then be used for standard contour/mesh/surf plots, etc.
+* `contourf_non_gridded.{m,py}`: Use Matlab's built-in `griddata` function to interpolate the data onto a standard meshgrid, which can then be used for standard contour/mesh/surf plots, etc.
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/contourf_non_gridded.png)
