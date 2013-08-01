@@ -33,8 +33,22 @@ agg.FigureCanvasAgg(fig)         # attach the rasterizer
 ax = fig.add_subplot(1, 1, 1)    # make axes to plot on
 ax.plot(table.x, table.y, '-', color='k', linewidth=2, label="Series 1")
 ax.plot(table.x, table.z, '--', color='r', linewidth=2, label="Series 2")
+
+# Fill between table.y and table.z
+# where= is an optional parameter that I use to fill only where
+# the sinusoid (y) is above the line (z).
+# Appending .values is necessary for some matplotlib functions
+# because they can get confused by the way pandas subscripts series.
+# Putting .values after a column name gives you a numpy array 
+# containing the data, which is what matplotlib expects.
+# color=(0.5, 0.5, 1.0, 0.2) is a tuple specifying the color
+# red = 0.5, green = 0.5, blue = 1.0, alpha = 0.2,
+# where alpha is for transparency.  (Each element in the color
+# should be between 0 and 1.)
 ax.fill_between(table.x.values, table.y.values, table.z.values, 
                 where=(table.y > table.z), color=(0.5,0.5,1.0,0.2))
+
+
 ax.set_xticks(numpy.arange(0, 10, 1))
 ax.set_yticks(numpy.arange(0,1,0.1))
 ax.legend(loc=4)
