@@ -51,3 +51,10 @@ From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)`
 * `contourf_non_gridded.{m,py}`: Use Matlab's built-in `griddata` function to interpolate the data onto a standard meshgrid, which can then be used for standard contour/mesh/surf plots, etc.
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/contourf_non_gridded.png)
+
+##### Animation
+
+* `animation.py`: Generates its data on the fly to make an animated sinusoid.  The Python version requires `imagemagick`.  After the frames have been generated, run `convert -delay 15 -loop 0 frame*png animation.gif`.
+
+![Image](example_images/animation.gif)
+
