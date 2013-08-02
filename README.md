@@ -40,7 +40,7 @@ From `example_data/gridded_2D.txt`. Used with:
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/imagesc_plot.png)
 
-* `contour_surf.m`: Contour, filled contour, and surface plots of meshgrid data
+* `contour_surf.{m,py}`: Contour, filled contour, and surface plots of meshgrid data
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/contour_surf.png)
 
@@ -48,7 +48,7 @@ From `example_data/gridded_2D.txt`. Used with:
 
 From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)` points that are not on a regular grid. Used with:
 
-* `scatter_plot.m`: Plot the irregularly spaced points as dots, with `Z` values as the color
+* `scatter_plot.{m,py}`: Plot the irregularly spaced points as dots, with `Z` values as the color
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/scatter_plot.png)
 
