@@ -25,20 +25,43 @@ import matplotlib.mlab as mlab # matlab compatibility functions
 from matplotlib.backends import backend_agg as agg # raster backend
 import pandas       # data analysis library
 import numpy        # numerical routines
+from mpl_toolkits.mplot3d import Axes3D
 
 table = pandas.read_table("example_data/gridded_2D.txt", 
                           sep=' ', header=None) 
 griddata = table.values
+norm = matplotlib.colors.Normalize(0, 1)
+
 fig = matplotlib.figure.Figure() # create the figure
 agg.FigureCanvasAgg(fig)         # attach the rasterizer
 
 ax = fig.add_subplot(1, 3, 1)    # make axes to plot on
 grid = numpy.arange(0, 1.0001, 0.01) 
 cmap = matplotlib.cm.get_cmap("hot")
-contourset = ax.contour(grid, grid, table.values, cmap=cmap)
-cbar = fig.colorbar(contourset)
-cbar.set_ticks([0.0,1.0])
+contourset = ax.contour(grid, grid, griddata, cmap=cmap, norm=norm)
+cbar = fig.colorbar(contourset, ax=ax)
+ax.set_title("Contour Plot of Gridded 2D Data")
+ax.set_xticks([0, 0.5,1.0])
+ax.set_yticks([0, 0.5,1.0])
 
+ax = fig.add_subplot(1,3,2)
+contourset = ax.contourf(grid, grid, griddata, cmap=cmap, norm=norm)
+cbar = fig.colorbar(contourset, ax=ax)
+ax.set_title("Filled Contour Plot of Gridded 2D Data")
+ax.set_xticks([0, 0.5,1.0])
+ax.set_yticks([0, 0.5,1.0])
+
+ax = fig.add_subplot(1,3,3, projection='3d')
+contourset = ax.plot_surface(grid, grid, griddata, cmap=cmap, 
+                             norm=norm, linewidth=0)
+cbar = fig.colorbar(contourset, ax=ax)
+ax.set_title("Surface Plot of Gridded 2D Data")
+ax.set_xticks([0, 0.5,1.0])
+ax.set_yticks([0.5,1.0])
+ax.set_zticks(numpy.arange(0,1,0.2))
+
+fig.set_figheight(3)
+fig.set_figwidth(15)
 fig.savefig("contour_surf.png")
 
 # vim:ts=4:sw=4:expandtab:ai:colorcolumn=68:number:fdm=indent
