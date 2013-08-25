@@ -1,4 +1,3 @@
-
 """
 Copyright (C) 2013 Matthew Woodruff
 
@@ -16,9 +15,8 @@ You should have received a copy of the GNU Lesser General Public License
 along with this script. If not, see <http://www.gnu.org/licenses/>.
 
 ===========================================================
-line_plot.py
-Reproduce the behavior of Jon's line_plot.py using
-matplotlib and pandas
+animated_gif.py
+Produce frames for an animated gif
 """
 
 import matplotlib              # plotting library
