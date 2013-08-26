@@ -8,7 +8,7 @@ See `example_images/` for the outputs from these files (PNG). Note that publicat
 
 From `example_data/column_data.txt`. Used with:
 
-* `line_plot.{m,py}`: Standard line plot with different formatting options
+* [`line_plot`](line_plot): Standard line plot with different formatting options
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/line_plot.png)
 
@@ -24,7 +24,7 @@ From `example_data/column_data.txt`. Used with:
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/animated_sinewave.gif)
 
-* `histogram_cdf.m`: Standard plots of frequency distributions
+* `histogram_cdf.{m,py}`: Standard plots of frequency distributions
 
 ![Image](https://raw.github.com/jdherman/matlab-plotting-examples/master/example_images/histogram_and_cdf.png)
 
