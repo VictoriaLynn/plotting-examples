@@ -3,7 +3,7 @@ clc; clear all;
 % Create contourf plot from non-gridded (experimental) data
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/non_gridded_2D.txt', ' ', 0);
+M = importdata('../example_data/non_gridded_2D.txt', ' ', 0);
 
 % M contains rows of (x,y,z) points that are not on a regular grid
 x = M(:,1);

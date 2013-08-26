@@ -5,7 +5,7 @@ addpath util
 % (using each row of data for one parallel line entry)
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/column_data.txt', ' ', 0);
+M = importdata('../example_data/column_data.txt', ' ', 0);
 
 % re-map the values in M to [0, 1] for consistent plotting
 M = scale_columns(M, min(M), max(M));

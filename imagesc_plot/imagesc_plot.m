@@ -6,7 +6,7 @@ clc; clear all;
 % thus imagesc is best for plotting matrix contents in color
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/gridded_2D.txt', ' ', 0);
+M = importdata('../example_data/gridded_2D.txt', ' ', 0);
 
 % imagesc(x, y, Z)
 % This will work for any dimension matrix Z (it doesn't have to be square)

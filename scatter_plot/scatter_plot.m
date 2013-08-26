@@ -3,7 +3,7 @@ clc; clear all;
 % Create scatter plot from non-gridded 2D data
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/non_gridded_2D.txt', ' ', 0);
+M = importdata('../example_data/non_gridded_2D.txt', ' ', 0);
 
 % scatter(x, y, size, color)
 % Colors are specified as [r g b] in range 0-1

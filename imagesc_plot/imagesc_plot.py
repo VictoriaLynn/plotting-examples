@@ -26,7 +26,7 @@ from matplotlib.backends import backend_agg as agg # raster backend
 import pandas       # data analysis library
 import numpy        # numerical routines
 
-table = pandas.read_table("example_data/gridded_2D.txt", 
+table = pandas.read_table("../example_data/gridded_2D.txt", 
                           sep=' ', header=None) 
          
 fig = matplotlib.figure.Figure() # create the figure

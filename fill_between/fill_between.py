@@ -25,7 +25,7 @@ from matplotlib.backends import backend_agg as agg # raster backend
 import pandas       # data analysis library
 import numpy        # numerical routines
 
-table = pandas.read_table("example_data/column_data.txt", 
+table = pandas.read_table("../example_data/column_data.txt", 
                           sep=' ', header=None, 
                           names=["x", "y", "z", "w"])
 fig = matplotlib.figure.Figure() # create the figure

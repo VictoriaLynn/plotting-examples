@@ -3,7 +3,7 @@ clc; clear all;
 % Create line plot from column data
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/column_data.txt', ' ', 0);
+M = importdata('../example_data/column_data.txt', ' ', 0);
 
 % plot(x, y, style, ...)
 % possible styles include:

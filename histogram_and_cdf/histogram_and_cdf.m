@@ -3,7 +3,7 @@ clc; clear all;
 % Create histograms and cdfs from column data
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/column_data.txt', ' ', 0);
+M = importdata('../example_data/column_data.txt', ' ', 0);
 
 % Row of histograms
 for i=2:4

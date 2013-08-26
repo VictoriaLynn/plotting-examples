@@ -30,7 +30,7 @@ fig = matplotlib.figure.Figure() # create the figure
 agg.FigureCanvasAgg(fig)         # attach the rasterizer
 ax = fig.add_subplot(1, 1, 1)    # make axes to plot on
 
-table = pandas.read_table("example_data/column_data.txt", 
+table = pandas.read_table("../example_data/column_data.txt", 
                           sep=' ', header=None) 
 mins = table.min()
 maxs = table.max()

@@ -3,7 +3,7 @@ clc; clear all;
 % Create contour and surface plots of gridded 2D data
 
 % importdata(filename, delimiter, num_headerlines)
-M = importdata('example_data/gridded_2D.txt', ' ', 0);
+M = importdata('../example_data/gridded_2D.txt', ' ', 0);
 
 % To use contour, contourf, and surf, X and Y must form a meshgrid
 [X, Y] = meshgrid(0:0.01:1, 0:0.01:1);

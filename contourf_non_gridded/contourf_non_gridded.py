@@ -26,7 +26,7 @@ from matplotlib.backends import backend_agg as agg # raster backend
 import numpy        # numeric library
 import pandas       # data analysis library
 
-table = pandas.read_table("example_data/non_gridded_2D.txt", 
+table = pandas.read_table("../example_data/non_gridded_2D.txt", 
                           sep=' ', header=None, 
                           names=["x", "y", "z"])
 ticks = numpy.arange(0,10,0.1)
