@@ -27,7 +27,7 @@ import pandas       # data analysis library
 import numpy        # numerical routines
 from mpl_toolkits.mplot3d import Axes3D
 
-table = pandas.read_table("example_data/gridded_2D.txt", 
+table = pandas.read_table("../example_data/gridded_2D.txt", 
                           sep=' ', header=None) 
 griddata = table.values
 norm = matplotlib.colors.Normalize(0, 1)
@@ -54,12 +54,17 @@ ax.set_yticks([0, 0.5,1.0])
 ax = fig.add_subplot(1,3,3, projection='3d')
 contourset = ax.plot_surface(grid, grid, griddata, cmap=cmap, 
                              norm=norm, linewidth=0)
-cbar = fig.colorbar(contourset, ax=ax)
-ax.set_title("Surface Plot of Gridded 2D Data")
+try:
+    ax.set_title("Surface Plot of Gridded 2D Data")
+except AttributeError:
+    # work around a bug in the axes3d implementation
+    ax.set_title("Surface Plot of Gridded 2D Data", "center")
+    
 ax.set_xticks([0, 0.5,1.0])
 ax.set_yticks([0.5,1.0])
 ax.set_zticks(numpy.arange(0,1,0.2))
 
+cbar = fig.colorbar(contourset, ax=ax)
 fig.set_figheight(3)
 fig.set_figwidth(15)
 fig.savefig("contour_surf.png")
