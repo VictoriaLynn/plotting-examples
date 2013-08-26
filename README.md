@@ -8,8 +8,9 @@ See `example_images/` for the outputs from these files (PNG). Note that publicat
 
 From `example_data/column_data.txt`. Used with:
 
-* [`line_plot`](https://raw.github.com/jdherman/plotting-examples/tree/separate_directories/line_plot): Standard line plot with different formatting options
-![Image](https://raw.github.com/jdherman/plotting-examples/tree/separate_directories/example_images/line_plot.png)
+* [`line_plot`](https://github.com/jdherman/plotting-examples/tree/separate_directories/line_plot): Standard line plot with different formatting options
+
+![Image](https://raw.github.com/jdherman/plotting-examples/master/example_images/line_plot.png)
 
 * [`fill_between`](https://raw.github.com/jdherman/plotting-examples/tree/separate_directories/fill_between): Same data as `line_plot`, with shaded fill between Series 1 and Series 2
 
