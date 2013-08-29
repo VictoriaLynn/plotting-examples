@@ -4,6 +4,7 @@ clc; clear all;
 M = importdata('../example_data/column_data.txt', ' ', 0);
 
 [ax,h1,h2] = plotyy(M(:,1),M(:,2),M(:,1),2*M(:,3),'plot');
+title('Dual Axis Plot of Column Data');
 % to get both x axes to obey the limit:
 set(ax,'XLim',[0 10]);
 xlabel('X');
