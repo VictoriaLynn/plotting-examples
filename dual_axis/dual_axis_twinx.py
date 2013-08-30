@@ -36,26 +36,17 @@ def execute(fig):
 
     ax1 = fig.add_subplot(1, 1, 1)    # make first axes to plot on
 
-    # make new axes *almost* in the same position, but not quite
-    bbx = ax1.get_position()
-    left, bottom = bbx.p0
-    jitter = 0.001
-    position = [left+jitter, bottom, bbx.width, bbx.height]
-    # exactly the same position makes matplotlib think you want ax1
-    ax2 = fig.add_axes(position) 
-    position[0] -= jitter 
-    ax2.set_position(position) # nudge ax2 back into alignment
+    ax2 = ax1.twinx()
 
-    ax1.plot(table.X, table.Y1, "r-", linewidth=2)
-    ax2.plot(table.X, table.Y2 * 100, "b--", linewidth=2)
-
-    ax1.zorder = 1
-    ax2.zorder = 0 # ax2 under ax1
+    ax1.plot(table.X, table.Y1, "k-", linewidth=4)
+    ax2.plot(table.X, table.Y2 * 2,  "k--", linewidth=4)
 
     ax1.patch.set_alpha(0.3) # partially transparent 
     ax2.set_xticklabels([])
     ax1.yaxis.tick_left()
     ax2.yaxis.tick_right()
+
+    ax1.set_title("Dual Axis Plot of Column Data")
 
 if __name__ == "__main__":
     fig = matplotlib.figure.Figure() # create the figure
