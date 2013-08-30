@@ -2,7 +2,7 @@
 #### Some examples for plotting different types of data in Matlab and Python
 Contributors: [jdherman](https://github.com/jdherman) and [matthewjwoodruff](https://github.com/matthewjwoodruff)
 
-See `example_images/` for the outputs from these files (PNG). Note that publication-quality figures will usually require a vector graphics format (SVG/EPS/PDF) along with some manual editing to improve font clarity, etc. The examples shown here are in unedited raster format and are only meant to be illustrative.
+See [`example_images`](https://github.com/jdherman/plotting-examples/tree/master/line_plot) for the outputs from these files (PNG). Note that publication-quality figures will usually require a vector graphics format (SVG/EPS/PDF) along with some manual editing to improve font clarity, etc. The examples shown here are in unedited raster format and are only meant to be illustrative.
 
 ##### Column data
 
