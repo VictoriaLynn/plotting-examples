@@ -16,6 +16,10 @@ From `example_data/column_data.txt`. Used with:
 
 ![Image](https://raw.github.com/jdherman/plotting-examples/master/example_images/fill_between.png)
 
+* [`dual_axis`](https://github.com/jdherman/plotting-examples/tree/master/dual_axis): Plot column data using two different Y-axes
+
+![Image](https://raw.github.com/jdherman/plotting-examples/master/example_images/dual_axis.png)
+
 * [`stacked_area`](https://github.com/jdherman/plotting-examples/tree/master/stacked_area): Stacked area plot with color options
 
 ![Image](https://raw.github.com/jdherman/plotting-examples/master/example_images/stacked_area.png)
