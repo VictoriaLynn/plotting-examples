@@ -7,15 +7,15 @@ addpath util
 % importdata(filename, delimiter, num_headerlines)
 M = importdata('../example_data/column_data.txt', ' ', 0);
 
-% re-map the values in M to [0, 1] for consistent plotting
-M = scale_columns(M, min(M), max(M));
-
 % define "brushing" thresholds
 % useful to focus on a few solutions instead of all at once
 % thresholds row format: column number, threshold value, less than (-1) or greater than (1)
 % not all columns need to have thresholds applied
 thresholds = [2 0.2 1; 4 0.5 -1]; 
 [brush_on_idx, brush_off_idx] = brush_solutions(M, thresholds);
+
+% re-map the values in M to [0, 1] for consistent plotting
+M = scale_columns(M, min(M), max(M));
 
 % brush_on_idx now contains the indices of the rows of M that satisfy:
 % Column 2 greater than 0.2 (scaled value)
