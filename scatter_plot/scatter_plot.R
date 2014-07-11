@@ -32,7 +32,7 @@ for(i in 1:length(M$V1)){
 }
 
 # Add a colorbar
-par(mar = c(3,2.5,2.5,2))
+par(mar = c(4,3.5,3.5,3))
 
 image(1, ColorLevels,
       matrix(data=ColorLevels, ncol=length(ColorRamp),nrow=1),
