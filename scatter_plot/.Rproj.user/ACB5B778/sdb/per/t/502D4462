@@ -1,0 +1,17 @@
+{
+    "contents" : "#Create scatter plot from non-gridded 2D data\n#some of this code created with help from \n#http://chitchatr.wordpress.com/page/3/\n\n#read.table(filename,sep=\"delimiter\",header=FALSE)\nM=read.table(\"../example_data/non_gridded_2D.txt\",sep=\" \",header=FALSE)\nstr(M)\n\n# Set layout.  We are going to include a colorbar next to plot.\nlayout(matrix(data=c(1,2), nrow=1, ncol=2), widths=c(4,1),\n       heights=c(1,1))\n#plotting margins.  \npar(mar = c(5,5,2.5,1), font = 2)\n\n#Make the scatter plot\n\nplot(M$V1,M$V2,main=\"Scatter Plot of Non-Gridded 2D Data\",\n     xlab='X',ylab='Y')\npar(mar = c(5,5,2.5,1), font = 2)\nColorRamp <- c(colorRampPalette(c(\"blue\", \"light blue\"))(50),\n             colorRampPalette(c(\"light blue\", \"light green\", \"yellow\"))(55),\n             colorRampPalette(c(\"orange\", \"red\", \"darkred\"))(70))\nColorLevels <- seq(min(M$V3), max(M$V3), length=length(ColorRamp))\n\nz_scl <- (M$V3 - min(M$V3, na.rm=T))/(max(M$V3, na.rm=T) - min(M$V3, na.rm=T))\ncolor_scl = round(z_scl*length(ColorRamp))\ncolor_scl[color_scl == 0] = 1\n\n# Loop to plot each point\nfor(i in 1:length(M$V1)){ \n  points(M$V1[i], M$V2[i], pch = 20, col = ColorRamp[color_scl[i]], cex = 2.5)\n}\n\n# Add a colorbar\npar(mar = c(3,2.5,2.5,2))\n\nimage(1, ColorLevels,\n      matrix(data=ColorLevels, ncol=length(ColorRamp),nrow=1),\n      col=ColorRamp,xlab=\"\",ylab=\"\",xaxt=\"n\", las = 1)\n\n### End of Plotting",
+    "created" : 1405081943976.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3014768111",
+    "id" : "502D4462",
+    "lastKnownWriteTime" : 1405090438,
+    "path" : "E:/plotting-examples/scatter_plot/scatter_plot.R",
+    "project_path" : "scatter_plot.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
