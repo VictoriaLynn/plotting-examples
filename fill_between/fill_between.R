@@ -1,4 +1,4 @@
-#create line plot from column data
+#add shading between lines to line_plot.R
 
 # Mise en place
 rm(list = ls())
