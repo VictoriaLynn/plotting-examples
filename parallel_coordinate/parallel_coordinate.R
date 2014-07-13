@@ -7,6 +7,9 @@
 # Mise en place
 rm(list = ls())
 
+#set working directory
+setwd("C:/Users/Tori/My\ Documents/plotting-examples/line_plot")
+
 #load package for parallel coordinate plot
 library(MASS)
 
@@ -87,7 +90,7 @@ parcoord(all_solutions,
 
 mtext("Scaled Values", side = 2, line = 1, cex = par("cex.lab"))
 # Add a colorbar
-par(mar = c(5,2.75,2.5,2.75))
+par(mar = c(5,3,2.5,3))
 
 image(1, ColorLevels,
       matrix(data=ColorLevels, ncol=length(ColorRamp),nrow=1),
