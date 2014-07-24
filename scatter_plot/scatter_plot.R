@@ -1,41 +1,66 @@
 #Create scatter plot from non-gridded 2D data
-#some of this code created with help from 
-#http://chitchatr.wordpress.com/page/3/
+#some of this code originally by Greg Garner
+# Mise en place
+rm(list = ls())
+graphics.off()
+
+#set working directory
+setwd("E:/plotting-examples/scatter_plot")
 
 #read.table(filename,sep="delimiter",header=FALSE)
-M=read.table("../example_data/non_gridded_2D.txt",sep=" ",header=FALSE)
-str(M)
+M=as.matrix(read.table("../example_data/non_gridded_2D.txt",sep=" ",header=FALSE))
+x <- M[ ,1]
+y <- M[ ,2]
+z <- M[ ,3]
 
-# Set layout.  We are going to include a colorbar next to plot.
-layout(matrix(data=c(1,2), nrow=1, ncol=2), widths=c(4,1),
-       heights=c(1,1))
-#plotting margins.  
-par(mar = c(5,5,2.5,1), font = 2)
-
-#Make the scatter plot
-
-plot(M$V1,M$V2,main="Scatter Plot of Non-Gridded 2D Data",
-     xlab='X',ylab='Y')
-par(mar = c(5,5,2.5,1), font = 2)
-ColorRamp <- c(colorRampPalette(c("blue", "light blue"))(50),
-             colorRampPalette(c("light blue", "light green", "yellow"))(55),
-             colorRampPalette(c("orange", "red", "darkred"))(70))
-ColorLevels <- seq(min(M$V3), max(M$V3), length=length(ColorRamp))
-
-z_scl <- (M$V3 - min(M$V3, na.rm=T))/(max(M$V3, na.rm=T) - min(M$V3, na.rm=T))
-color_scl = round(z_scl*length(ColorRamp))
-color_scl[color_scl == 0] = 1
-
-# Loop to plot each point
-for(i in 1:length(M$V1)){ 
-  points(M$V1[i], M$V2[i], pch = 20, col = ColorRamp[color_scl[i]], cex = 2.5)
+#- Here's a useful function to normalize a vector of data
+#- to between 0 and 1.
+normalize.vector <- function(x, ...) {
+  (x-min(x, ...))/max(x-min(x, ...), ...)
 }
 
+#fields is useful for colorbars
+if (!require("fields")) {
+  install.packages("fields", dependencies = TRUE)
+  library(fields)
+}
+
+#plotting margins.  
+par(mar = c(5,5,2.5,8.5), font = 2, xaxs = "i",yaxs = "i")
+
+#Make the scatter plot
+#- Making a colorbar is a multi-step process.  First
+#- let's create a color ramp from which to sample colors
+my.colramp <- colorRamp(colors=c("blue", "lightblue", 
+                                 "lightgreen", "yellow", 
+                                 "orange", "red", "darkred"))
+
+#- "my.colramp" is a function that takes a value [0,1] and
+#- returns an rgb value for the appropriate color in the ramp.
+
+#- Normalize the data of the z column
+z.norm <- normalize.vector(z, na.rm=T)
+
+#- Use the normalized values to get colors
+z.col.components <- my.colramp(z.norm)
+
+#- Convert the rgb values into actual colors
+z.cols <- rgb(z.col.components, maxColorValue=255)
+
+#- Use the same color ramp to make colors for the bar
+my.colbar.cols <- rgb(my.colramp(seq(0,1,l=100)), maxColorValue=255)
+
+
+plot(M[ ,1],M[ ,2],main="Scatter Plot of Non-Gridded 2D Data",
+                     xlab='X',ylab='Y', pch=19, col=z.cols, 
+                     xlim = range(x),ylim=range(y),
+                     panel.first=grid(lty= "dashed"))
+
 # Add a colorbar
-par(mar = c(4,3.5,3.5,3))
 
-image(1, ColorLevels,
-      matrix(data=ColorLevels, ncol=length(ColorRamp),nrow=1),
-      col=ColorRamp,xlab="",ylab="",xaxt="n", las = 1)
-
-### End of Plotting
+#- For the colorbar, "fields" is a fairly useful package.
+#- It provides "image.plot" which will allow you to plot
+#- a colorbar over an existing plot.
+image.plot(legend.only=T, add=T, horizontal=F, 
+           col=my.colbar.cols, zlim=range(z),
+           legend.lab="Z", legend.line=1.5)

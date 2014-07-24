@@ -33,7 +33,8 @@ for (t in 1:50){
 par(mar = c(2,2,2,2), font = 1.5)
 
 matplot(x,sin(omega*t+k*x),type="l",xlab="",ylab="",main="",
-        col=c("red"), lwd=c(2), lty=c(1))
+        col=c("red"), lwd=c(2), lty=c(1), ylim=c(-1,1),
+        xlim=range(x),yaxs="i",xaxs="i")
 
 #add grid
 abline(v=(seq(0,6, 1)), col="lightgray", lty="dotted")
