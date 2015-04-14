@@ -1,6 +1,6 @@
 ## Plotting Examples
 #### Some examples for plotting different types of data in Matlab, Python, and R
-Contributors: [VictoriaLynn ](https://github.com/VictoriaLynn), [matthewjwoodruff](https://github.com/matthewjwoodruff), and [jdherman](https://github.com/jdherman)  
+Contributors: [VictoriaLynn](https://github.com/VictoriaLynn), [matthewjwoodruff](https://github.com/matthewjwoodruff), and [jdherman](https://github.com/jdherman)  
 
 See [`example_images`](https://github.com/jdherman/plotting-examples/tree/master/line_plot) for the outputs from these files (PNG). Note that publication-quality figures will usually require a vector graphics format (SVG/EPS/PDF) along with some manual editing to improve font clarity, etc. The examples shown here are in unedited raster format and are only meant to be illustrative.
 
