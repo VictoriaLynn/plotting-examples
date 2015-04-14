@@ -16,8 +16,8 @@ graphics.off()
 setwd("C:/Users/Tori/My Documents/plotting-examples/3D-scatter")
 
 #- Open a plotting device
-pdf("scatter3d_plot.pdf", width=7, height=5)
-
+#pdf("scatter3d_plot.pdf", width=7, height=5)
+png(filename = "scatter3d_plot.png", width = 480, height = 343)
 
 #- Here's a useful function to normalize a vector of data
 #- to between 0 and 1.
