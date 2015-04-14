@@ -13,7 +13,7 @@ rm(list = ls())
 graphics.off()
 
 #set working directory
-setwd("E:/3D_R_scatter")
+setwd("C:/Users/Tori/My Documents/plotting-examples/3D-scatter")
 
 #- Open a plotting device
 pdf("scatter3d_plot.pdf", width=7, height=5)
@@ -39,7 +39,7 @@ if (!require("fields")) {
 
 #- There are much easier and faster ways to 
 #- read in data files.  Consider this...
-my.rawdata <- read.table("sample_data.txt", header=F, colClasses="numeric")
+my.rawdata <- read.table("../example_data/five_obj_data.txt", header=F, colClasses="numeric")
 nobjs <- ncol(my.rawdata)
 npoints <- nrow(my.rawdata)
 obj1 <- my.rawdata[,1]
