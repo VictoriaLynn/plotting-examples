@@ -60,4 +60,10 @@ From `example_data/non_gridded_2D.txt`. The data file contains rows of `(x,y,z)`
 
 ![Image](https://raw.github.com/jdherman/plotting-examples/master/example_images/contourf_non_gridded.png)
 
+##### 3D Scatter Plot
 
+From `example_data/five_obj_data.txt`.  Used with:
+
+* [`3D-scatter`](https://github.com/VictoriaLynn/plotting-examples/tree/master/3D-scatter): Plot data in 5 dimensions using R and Python. 
+
+![Image](https://github.com/VictoriaLynn/plotting-examples/blob/master/example_images/scatter_plot_3d.png)
